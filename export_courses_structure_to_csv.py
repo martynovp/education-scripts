@@ -90,7 +90,7 @@ all_courses = modulestore().get_courses()
 for course in all_courses:
     run = str(course.location.run)
     course_id = str(course.id)
-    if run in ('2018', '2019', '2020'):
+    if '2018' in run or '2019' in run or '2020' in run:
         csv_file_name = csv_result_dir + course_id.split(':')[1].replace('+', '_') + '.csv'
 
         if not os.path.isfile(csv_file_name):
